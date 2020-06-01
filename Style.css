@@ -1,0 +1,65 @@
+
+        #mainBoxArea{
+
+            width: 325px;
+            border: 10px solid  rgb(0, 0, 255);
+            padding: 50px;
+            margin: 20px;    
+            background-color:rgb(220, 20, 60);
+            height:275px
+
+        }
+
+        .titles{
+
+            color: white;
+            margin-bottom: 48px;
+            font-family: Garamond;
+
+        }
+
+        .labels{
+
+            color:white ;
+            font-family: Garamond;
+            font-weight: bold;
+
+        }
+
+        #lowerButtons{
+
+           margin-top: 55px;
+           position:fixed;
+           top:260px    
+
+        }
+
+        #emailInput{
+
+            margin-left: 61px;
+            margin-bottom: 15px 
+        }
+        
+        #password{
+
+            margin-left: 28px;
+            margin-bottom: 15px
+
+        }
+
+        #cancelButtonLogIn{
+
+            margin-left: 221px
+        }
+
+        #cancelButtonSignUp{
+
+            margin-left: 218px
+
+        }
+
+        
+        #showButton{
+            position: absolute;
+            margin-left: 5px;
+        }
