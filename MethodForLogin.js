@@ -1,64 +1,54 @@
 
 var count = 0;
-var showPassword = function () 
-{
+var showPassword = function () {
     document.getElementById("password").type = "text";
 }
 
-var hidePassword = function ()
-{
+var hidePassword = function () {
     document.getElementById("password").type = "password";
 }
 
-var clickCounter = function () 
-{
+var clickCounter = function () {
     count = count + 1;
     var decision = count % 2;
 
-    if (decision == 0) 
-    {
+    if (decision == 0) {
         hidePassword();
     }
-    else 
-    {
+    else {
         showPassword();
     }
 
 }
 
-var memberVerification=function()
-{   
-    var emailInput= document.getElementById("emailInput").value;
-    var passwordInput= document.getElementById("password").value;
-    var savedPassword=localStorage.getItem(emailInput);
-    if(passwordInput===savedPassword)
-    {
+var memberVerification = function () {
+    var emailInput = document.getElementById("emailInput").value;
+    var passwordInput = document.getElementById("password").value;
+    var savedPassword = localStorage.getItem(emailInput);
+    if (passwordInput === savedPassword) {
         return true;
     }
-    else
-    {
+    else {
         return false;
     }
 
 }
 
-var loginMethod=function()
-{
-    if(memberVerification())
-    {
-        alert("welcom back");
+var loginMethod = function () {
+    if (memberVerification()) {
+        document.getElementById("alertArea").style.color = "white";
+        document.getElementById("alertArea").innerHTML = "Welcome Back";
     }
-    else
-    {
-        alert("invalid email/password");
+    else {
+        document.getElementById("alertArea").style.color = "white";
+        document.getElementById("alertArea").innerHTML = "Invalid Email/Password";
     }
-    
+
 }
 
-window.onload= function()
-{   
-    var showButton= document.getElementById("showButton");
-    var loginButton= document.getElementById("loginButton");
-    showButton.addEventListener("click",clickCounter);
-    loginButton.addEventListener("click",loginMethod);
+window.onload = function () {
+    var showButton = document.getElementById("showButton");
+    var loginButton = document.getElementById("loginButton");
+    showButton.addEventListener("click", clickCounter);
+    loginButton.addEventListener("click", loginMethod);
 }
